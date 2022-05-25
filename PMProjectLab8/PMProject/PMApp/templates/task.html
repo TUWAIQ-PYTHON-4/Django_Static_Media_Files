@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Task</title>
+</head>
+<body>
+
+{% block content %}
+
+{%for item in context %}
+          <ul>
+              <li><strong>Task Titel: </strong>{{item.title}}</li>
+              <li><strong>Task Description: </strong>{{item.description}} </li>
+              <li><strong>Task Time Tstimate: </strong>{{item.time_estimate}} </li>
+              <li><strong>Task Completed: </strong>{{item.completed}} </li>
+              <li><strong>Task Project: </strong>{{item.project}} </li>
+              <li> <br> <img src="{{ item.image_field.url }}" class="rounded float-start" alt="aaa"></li>
+          </ul>
+{% endfor %}
+{% endblock %}
+</body>
+</html>
