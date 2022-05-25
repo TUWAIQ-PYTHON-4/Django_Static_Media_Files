@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} PMP | Home {% endblock %}
+
+{% block content %}
+<h5> PMP Home page </h5>
+
+<ul class="list_group">
+    {% for i in project_list %}
+    <li class="list-group-item">
+        <span class="text-info">Project Name: </span> <span> {{ i.project.name }} </span>
+        <br>
+        <span class="text-info">Creation Time: </span> <span> {{ i.project.creation_time }} </span>
+        <br>
+        <span class="text-info">Completion Time: </span> <span> {{ i.project.completion_time }} </span>
+        <br>
+        <span class="text-info">Image: </span> <img src="{{ i.project.image_field.url }}" height="100" width="150">
+        <br>
+    </li>
+    <br>
+    {% endfor %}
+</ul>
+
+{% endblock %}
