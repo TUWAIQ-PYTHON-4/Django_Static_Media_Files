@@ -9,3 +9,4 @@
 3. Add media to your app (image file).
 4. Update your model with new field (project_logo).
 5. Create view then retrieve your data on template.
+

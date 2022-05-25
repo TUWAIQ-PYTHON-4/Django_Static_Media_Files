@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="{% static 'css/bootstrap.min.css' %}" >
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    {% for item in all_itmes %}
+       <li> {{i}} </li> 
+    {% endfor %}
+    <ul>
+        <li>
+            Logo Image: <br> <img src = "{{ item.p.image_field.url}}">
+        </li>
+    </ul>
+</body>
+</html>
+
