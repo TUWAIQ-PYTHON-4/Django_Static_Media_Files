@@ -1,0 +1,36 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Lab 5</title>
+          <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="{% static '/images/project-planning-header@2x.png' %} ",width="30" height="30" class="d-inline-block align-top" alt="">
+    Lab5
+  </a>
+</nav>
+</head>
+<body><center>
+<h1>| Lab 5 : Django_Static_Media_Files |</h1>
+
+<ul>
+    {% for item in Project_list %}
+
+    <li class="list-group-item list-group-item-success"><samp>Project Name:</samp> <samp>{{item.pub.name}}</samp></li>
+  <li class="list-group-item list-group-item-primary"><samp> Project Creation Time:</samp> <samp>{{item.pub.creation_time}}</samp></li>
+  <li class="list-group-item list-group-item-secondary"><samp>Project Completion Time:</samp> <samp>{{item.pub.completion_time}}</samp></li>
+    <li> Publisher image: <br> <img src="{{ item.pub.project_logo.url}}" ,width="100" height="100"></li>
+
+<br>
+    {% endfor %}
+</ul>
+</center>
+
+</body>
+</html>
