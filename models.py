@@ -7,8 +7,8 @@ class Project(models.Model):
     name = models.CharField(max_length=100, help_text="project name")
     creation_time = models.DateField(auto_now_add=True, help_text="Date of the Project .")
     completion_time = models.DateField(null=True, help_text="Completion time.")
-    #image_field = models.ImageField(upload_to="images/")
-    #project_logo=models.ImageField(upload_to="images/")
+    image_field = models.ImageField(upload_to="images/")
+    project_logo=models.ImageField(upload_to="images/")
 
     def __str__(self):
         return self.name
