@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bage Project</title>
+</head>
+<body>
+
+
+
+{% block content %}
+
+{%for item in projects %}
+          <ul>
+              <li><strong>Project Name: </strong>{{item.name}} </li>
+              <li><strong>Project Creation Time: </strong>{{item.creation_time}} </li>
+              <li><strong>Project Completion Time: </strong>{{item.completion_time}} </li>
+              <li> <br> <img src="{{ item.image_field.url }}" class="rounded float-start" alt="aaa"></li>
+
+
+          </ul>
+{% endfor %}
+
+{% endblock %}
+</body>
+</html>
